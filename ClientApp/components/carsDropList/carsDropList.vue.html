@@ -1,0 +1,14 @@
+﻿<template>
+    <div>
+        <p>Выберите машину</p>
+        <select v-model="selected">
+            <option disabled value="">Выберите один из вариантов</option>
+            <option>BMW</option>
+            <option>Lada</option>
+            <option>Kia</option>
+        </select>
+        <span>Выбрано: {{ selected }}</span>
+    </div>
+</template>
+
+<script src="./carsDropList.js"></script>

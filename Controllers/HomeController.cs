@@ -19,6 +19,10 @@ namespace new_project.Controllers
             ViewData["RequestId"] = Activity.Current?.Id ?? HttpContext.TraceIdentifier;
             return View();
         }
+        public JsonResult GetSelectedCar()
+        {
 
+            return Json("Lada");
+        }
     }
 }

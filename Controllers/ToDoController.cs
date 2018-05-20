@@ -16,12 +16,13 @@ namespace new_project.Controllers
         new Todo { Id = Guid.NewGuid(), Description = "Learn Vue" }
     };
 
+  
         [HttpGet()]
-        public IEnumerable<Todo> GetTodos()
+        public JsonResult GetSelectedCar()
         {
-            return todos.Where(t => !t.Done);
+            
+            return Json("Lada");
         }
-
         [HttpPost()]
         public Todo AddTodo([FromBody]Todo todo)
         {

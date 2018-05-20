@@ -1,0 +1,23 @@
+﻿<template>
+    <div >
+        <div class="Dialog" v-show="active">
+            <div class="Dialog_overlay" @click="close()"></div>
+            <div class="Dialog_content">
+                <div class="Dialog_body">
+                    Вы хотите купить машину?
+                </div>
+
+                <div class="Dialog_footer">
+                    <button class="btn" @click="onCancel">Отмена</button>
+                    <button class="btn_ok" >
+                        <v-link href="/carsDropList" v-bind:routes="getGlobalRoutes">Да</v-link>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <a class="link" href="#" @click.prevent="open">Покупка машины</a>
+    </div>
+</template>
+
+<script src="./carPurchase.js"></script>
